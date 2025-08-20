@@ -628,8 +628,8 @@ function loadSubscribers() {
                 <td>${subscriber.hoursPerWeek}</td>
                 <td>${subscriber.takenHours}</td>
                 <td>${remainingHours}</td>
-                <td>${subscriber.paidAmount} ر.س</td>
-                <td>${remainingAmount} ر.س</td>
+                <td>${subscriber.paidAmount} ر.ي</td>
+                <td>${remainingAmount} ر.ي</td>
                 <td><span class="badge ${status === 'مسدد' ? 'badge-success' : 'badge-danger'}">${status}</span></td>
                 <td class="action-buttons">
                     <button class="btn btn-primary edit-subscriber" data-id="${subscriber.id}"><i class="fas fa-edit"></i></button>
@@ -689,8 +689,8 @@ function loadBuyers() {
                 <td>${buyer.name}</td>
                 <td>${buyer.hoursCount}</td>
                 <td>${formatDateTime(buyer.deliveryDate)}</td>
-                <td>${buyer.buyerPaid} ر.س</td>
-                <td>${remainingAmount} ر.س</td>
+                <td>${buyer.buyerPaid} ر.ي</td>
+                <td>${remainingAmount} ر.ي</td>
                 <td><span class="badge ${status === 'مسدد' ? 'badge-success' : 'badge-danger'}">${status}</span></td>
                 <td class="action-buttons">
                     <button class="btn btn-primary edit-buyer" data-id="${buyer.id}"><i class="fas fa-edit"></i></button>
@@ -1675,7 +1675,7 @@ function initEvents() {
                 if (newRemaining > 0) {
                     // تحديث سجل الدين بالمبلغ المتبقي
                     updateDebtRecord(debt.id, newRemaining);
-                    showSuccess(`تم تسديد ${paymentAmount} ر.س من الدين، المتبقي: ${newRemaining} ر.س`);
+                    showSuccess(`تم تسديد ${paymentAmount} ر.ي من الدين، المتبقي: ${newRemaining} ر.ي`);
                 } else {
                     // حذف سجل الدين بالكامل إذا تم تسديده كاملاً
                     deleteDebtRecord(debt.id);
